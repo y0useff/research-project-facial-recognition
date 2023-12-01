@@ -3,7 +3,7 @@ import pygame
 import time
 
 #lets say input from detect function can be a name of the person detected.
-def robot_sound(detect_name):
+def play_sound(detect_name):
     text = "Found {}"
     m=text.format(detect_name)
     tts = gTTS(text=m, lang='en',slow=True)
@@ -20,7 +20,7 @@ def play_robot_voice(file_path):
     pygame.mixer.init()
     pygame.mixer.music.load(file_path)
     pygame.mixer.music.play()
-robot_sound("name")
+play_sound("name")
 
 
 
